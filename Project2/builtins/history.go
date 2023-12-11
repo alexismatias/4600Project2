@@ -1,14 +1,11 @@
 package builtins
 
 import (
-	"errors"
 	"fmt"
-	"strconv"
 )
 
 var (
-	ErrInvalidArgCount = errors.New("invalid argument count")
-	History            []string
+	History []string
 )
 
 func DisplayHistory() {
@@ -48,7 +45,7 @@ func HistoryCommand(args ...string) error {
 		return nil
 	}
 
-	switch len(args) {
+	/*switch len(args) {
 	case "-c":
 		ClearHistory()
 	case "-h":
@@ -65,7 +62,7 @@ func HistoryCommand(args ...string) error {
 		}
 		LastHistory(n)
 	}
-
+	*/
 	return nil
 
 }
