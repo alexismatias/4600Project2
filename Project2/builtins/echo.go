@@ -1,10 +1,10 @@
-package main
+package builtins
 
 import (
 	"fmt"
 	"strings"
 )
 
-func echo(args []string) {
+func EchoCommand(args ...string) {
 	fmt.Println(strings.Join(args, " "))
 }

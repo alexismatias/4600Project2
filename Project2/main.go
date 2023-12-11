@@ -81,9 +81,9 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	case "history":
 		return builtins.HistoryCommand(args...)
 	case "ls":
-		return ls(path)
+		builtins.LSCommand(args...)
 	case "echo":
-		return echo(args)
+		builtins.EchoCommand(args...)
 	case "exit":
 		exit <- struct{}{}
 		return nil

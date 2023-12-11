@@ -5,8 +5,12 @@ import (
 	"os"
 )
 
-func ls(path string) error {
-	files, err := os.ReadDir(path)
+var (
+	String string
+)
+
+func LSCommand(args ...string) error {
+	files, err := os.ReadDir(String)
 	if err != nil {
 		return err
 	}
